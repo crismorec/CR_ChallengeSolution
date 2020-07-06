@@ -45,7 +45,7 @@ int recursive_search_path(int graph[V][V], bool Visit[V * V], int tempath[V * V]
 				continue;
 			}
 
-			if (Visit[rowNum * V + colNum] == false && // vertex not visited
+			if (Visit[rowNum * V + colNum] == false && // vertex not visited yet
 				graph[indX][indY] > graph[rowNum][colNum] // **rule #2 this must be lest than.
 				) {
 				notpath = 0; // path found; (camino encontrado)
@@ -91,7 +91,6 @@ int recursive_search_path(int graph[V][V], bool Visit[V * V], int tempath[V * V]
 	}
 }
 
-
 // Funtion that implements like of Dijkstra single source largest path algorithm
 
 void search_path(int graph[V][V], int indX, int indY) {
@@ -119,7 +118,7 @@ void printSolution(int dist[V * V])
 		printf("-%i", dist[i]);
 	}
 	printf("\n\n");	
-	printf("by crismorec\n");
+	printf("by crismorec\n"); printf("\n\n");
 }
 
 
