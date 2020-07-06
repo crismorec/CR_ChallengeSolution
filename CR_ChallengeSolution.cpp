@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 
+/******************************************************************************
+	Challenge Solution
+*******************************************************************************/
+
 static int verbose_flag;
 
 #define V 4 //Matrix  size
@@ -109,12 +113,13 @@ void search_path(int graph[V][V], int indX, int indY) {
 void printSolution(int dist[V * V])
 {
 	int i = 0;
-	printf("path: %i", dist[i]);
+	printf("Longest path: %i", dist[i]);
 	for (i = 1; i <= V; i++) {
 		if (dist[i] == 0) break;
 		printf("-%i", dist[i]);
 	}
 	printf("\n\n");	
+	printf("by crismorec\n");
 }
 
 
